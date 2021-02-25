@@ -2,14 +2,15 @@ Documentation
 文档
 
 V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++. 
-V8是谷歌用c++开发的开源高性能javascript（下文都将简称：js）、webassembly 引擎。
+V8是谷歌，用c++开发的开源高性能javascript（下文都将简称：js）、webassembly 引擎。
 It is used in Chrome and in Node.js, among others.
 它被用于Chrome、Node与其他的一些环境中。
 This documentation is aimed at C++ developers who want to use V8 in their applications, as well as anyone interested in V8’s design and performance. 
-这篇文档的目标群体是：想要在自己的应用中使用v8的c++开发者们，与任何对v8的设计和性能感兴趣的人。
+这篇文档的目标群体是：想要在自己的应用中使用v8的c++开发者们，与任何对v8的设计和性能感兴趣的人们。
 This document introduces you to V8, while the remaining documentation shows you how to use V8 in your code and describes some of its design details, 
+这篇文档会通过现有文档介绍如何在你的代码中使用v8、阐述一些设计细节，
 as well as providing a set of JavaScript benchmarks for measuring V8’s performance.
-这篇文档会通过现有文档介绍如何使用v8、阐述一些设计细节，同时，提供一系列用来衡量v8性能的js基准测试；
+同时，提供一系列用来衡量v8性能的js基准测试；
 
 About V8
 关于v8
@@ -25,12 +26,12 @@ V8’s stop-the-world, generational, accurate garbage collector is one of the ke
 v8的stop-the-world，新旧生代的处理方式，与垃圾回收的精准收集机制是v8性能的关键之一。
 
 JavaScript is commonly used for client-side scripting in a browser, being used to manipulate Document Object Model (DOM) objects for example.
-js是被广泛用于浏览器客户侧的脚本语言，可用来操作DOM对象。
+js是被广泛用于浏览器客户侧的脚本语言，例如：它可用来操作DOM对象。
 The DOM is not, however, typically provided by the JavaScript engine but instead by a browser. 
 DOM是典型的由浏览器，而非javascript引擎提供的对象。
 
 The same is true of V8 — Google Chrome provides the DOM. 
-对v8来说也是如此，DOM是由Google Chrome提供。 （Todo: 感觉这里翻译的有点脱节）
+对v8来说也是如此，DOM是由Google Chrome提供。
 V8 does however provide all the data types, operators, objects and functions specified in the ECMA standard.
 尽管如此，V8也提供了所有ECMA标准中列举的所有数据类型、操作符、对象以及函数方法。
 
