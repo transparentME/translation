@@ -11,7 +11,7 @@ const content = `
 `
 function Offer15() {
   return (
-    <pre className="Offer15">
+    <pre className="Offer15" style={{whiteSpace: 'break-spaces'}}>
       {content}
     </pre>
   );
