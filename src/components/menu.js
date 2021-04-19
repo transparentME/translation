@@ -28,6 +28,9 @@ class MainMenu extends React.Component {
                 <Menu.Item key="FastPropertiesInV8">
                   <Link to="/v8-FastPropertiesInV8">FastPropertiesInV8</Link>
                 </Menu.Item>
+                <Menu.Item key="DiggingIntoTheTurboFanJIT">
+                  <Link to="/v8-DiggingIntoTheTurboFanJIT">DiggingIntoTheTurboFanJIT</Link>
+                </Menu.Item>
               </SubMenu>
               <SubMenu key="Docs" title="Docs">
                 <Menu.Item key="Object rest and spread properties">Object rest and spread properties</Menu.Item>
@@ -61,6 +64,9 @@ class MainMenu extends React.Component {
           <SubMenu key="leetcode" title="算法">
             <Menu.Item key="Offer15">
               <Link to="/leetcode-offer15">Offer15</Link>
+            </Menu.Item>
+            <Menu.Item key="Offer17">
+              <Link to="/leetcode-offer17">Offer17</Link>
             </Menu.Item>
           </SubMenu>
         </Menu>
