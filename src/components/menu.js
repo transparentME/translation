@@ -31,6 +31,9 @@ class MainMenu extends React.Component {
                 <Menu.Item key="DiggingIntoTheTurboFanJIT">
                   <Link to="/v8-DiggingIntoTheTurboFanJIT">DiggingIntoTheTurboFanJIT</Link>
                 </Menu.Item>
+                <Menu.Item key="V8ReleaseV4_5">
+                  <Link to="/v8-V8ReleaseV4_5">V8ReleaseV4_5</Link>
+                </Menu.Item>
               </SubMenu>
               <SubMenu key="Docs" title="Docs">
                 <Menu.Item key="Object rest and spread properties">Object rest and spread properties</Menu.Item>
