@@ -74,7 +74,7 @@ const content = `
   For many years, V8’s traditional optimizing compiler, Crankshaft, has done a great job of optimizing many common JavaScript patterns.
   However, it never had the capability to support the entire JavaScript language, and using certain language features in a function — such as try/catch and with — would prevent it from being optimized.
   V8 would have to fall back to its slower, baseline compiler for that function.
-  更多的js语言特性都是可优化的
+  更多的js语言特性都是可优化的。
   很多以来，v8的传统的优化编译器，也就是Crankshaft，一直在对优化很多常见的js模式做大量的工作。
   但是，他却从无法支持整个js语言，并且当在函数内使用了某些特定的语言特性，例如try/catch 和 with，就会导致语句无法优化。
   因此，v8就不得不回滚到他的更慢的基线编译器来处理那个函数。
@@ -95,6 +95,8 @@ const content = `
   }
   Although initially functions that use these language features won't reach the same peak performance as other code compiled by Crankshaft, TurboFan can now speed them up well beyond our current baseline compiler.
   Even better, performance will continue to improve quickly as we develop more optimizations for TurboFan.
+  尽管最初使用这些语言特性的函数不能与那些被Crankshaft编译的代码一样达到最佳性能，但TurboFan现在已经可以使远远超过我们现有的基线编译器的编译速度。
+  更棒的是，性能也会随着我们对TurboFan开发更多的优化，得到持续提升。
 
   V8 API
 
@@ -104,6 +106,8 @@ const content = `
   这个文档也会定期地在每一次主要发布之后更新几个星期。
   Developers with an active V8 checkout can use git checkout -b 4.5 -t branch-heads/4.5 to experiment with the new features in V8 v4.5.
   Alternatively you can subscribe to Chrome's Beta channel and try the new features out yourself soon.
+  持续关注v8的开发者们可以通过git checkout -b 4.5 -t branch-heads/4.5来体验v8 4.5版本内的那些新特性。
+  或者你也可以关注Chrome的Beta channel, 并在不久的之后自己体验新特性。
 `
 function V8ReleaseV4_5() {
   return (
