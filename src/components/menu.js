@@ -37,6 +37,9 @@ class MainMenu extends React.Component {
                 <Menu.Item key="CodeCache">
                   <Link to="/v8-CodeCache">CodeCache</Link>
                 </Menu.Item>
+                <Menu.Item key="GettingGarbageCollectionForFree">
+                  <Link to="/v8-GettingGarbageCollectionForFree">GettingGarbageCollectionForFree</Link>
+                </Menu.Item>
               </SubMenu>
               <SubMenu key="Docs" title="Docs">
                 <Menu.Item key="Object rest and spread properties">Object rest and spread properties</Menu.Item>

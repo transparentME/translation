@@ -7,6 +7,7 @@ import FastPropertiesInV8 from '../pages/FastPropertiesInV8/FastPropertiesInV8.j
 import DiggingIntoTheTurboFanJIT from '../pages/DiggingIntoTheTurboFanJIT/DiggingIntoTheTurboFanJIT.js'
 import V8ReleaseV4_5 from '../pages/V8ReleaseV4.5/V8ReleaseV4_5.js'
 import CodeCache from '../pages/CodeCache/CodeCache.js'
+import GettingGarbageCollectionForFree from '../pages/GettingGarbageCollectionForFree/GettingGarbageCollectionForFree.js'
 
 // leetcode
 import Offer15 from '../pages/leetcode/Offer15.js'
@@ -22,7 +23,7 @@ function MainContent () {
       <Route path="/v8-DiggingIntoTheTurboFanJIT" component={DiggingIntoTheTurboFanJIT} />
       <Route path="/v8-V8ReleaseV4_5" component={V8ReleaseV4_5} />
       <Route path="/v8-CodeCache" component={CodeCache} />
-
+      <Route path="/v8-GettingGarbageCollectionForFree" component={GettingGarbageCollectionForFree} />
       {/* leetcode */}
       <Route path="/leetcode-offer15" component={Offer15} />
       <Route path="/leetcode-offer17" component={Offer17} />
