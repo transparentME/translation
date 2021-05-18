@@ -40,6 +40,9 @@ class MainMenu extends React.Component {
                 <Menu.Item key="GettingGarbageCollectionForFree">
                   <Link to="/v8-GettingGarbageCollectionForFree">GettingGarbageCollectionForFree</Link>
                 </Menu.Item>
+                <Menu.Item key="V8ReleaseV9_1">
+                  <Link to="/v8-V8ReleaseV9_1">V8ReleaseV9_1</Link>
+                </Menu.Item>
               </SubMenu>
               <SubMenu key="Docs" title="Docs">
                 <Menu.Item key="Object rest and spread properties">Object rest and spread properties</Menu.Item>
