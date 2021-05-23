@@ -9,6 +9,7 @@ import V8ReleaseV4_5 from '../pages/V8ReleaseV4.5/V8ReleaseV4_5.js'
 import CodeCache from '../pages/CodeCache/CodeCache.js'
 import GettingGarbageCollectionForFree from '../pages/GettingGarbageCollectionForFree/GettingGarbageCollectionForFree.js'
 import V8ReleaseV9_1 from '../pages/V8ReleaseV9_1/V8ReleaseV9_1.js'
+import ShortBuiltIns from '../pages/ShortBuiltIns/ShortBuiltIns.js'
 
 // leetcode
 import Offer15 from '../pages/leetcode/Offer15.js'
@@ -25,6 +26,7 @@ function MainContent () {
       <Route path="/v8-V8ReleaseV4_5" component={V8ReleaseV4_5} />
       <Route path="/v8-CodeCache" component={CodeCache} />
       <Route path="/v8-GettingGarbageCollectionForFree" component={GettingGarbageCollectionForFree} />
+      <Route path="/v8-ShortBuiltIns" component={ShortBuiltIns} />
       <Route path="/v8-V8ReleaseV9_1" component={V8ReleaseV9_1} />
 
       {/* leetcode */}
