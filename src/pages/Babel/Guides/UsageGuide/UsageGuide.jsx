@@ -1,3 +1,11 @@
+import MarkdownTransfer from '../../../../components/MarkdownTransfer'
+const UsageGuide = () => {
+  let html = MarkdownTransfer(content)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+};
+const content = `
 Usage Guide
 使用指引
 There are quite a few tools in the Babel toolchain that try to make it easy for you to use Babel whether you're an "end-user" or building an integration of Babel itself.
@@ -259,3 +267,6 @@ We used @babel/cli to run Babel from the terminal, @babel/polyfill to polyfill a
 @babel/cli可以让我们在终端上运行Babel，@babel/polyfill可以满足所有新的js的特性，env preset可帮我们引入只是我们需要使用到的，但目标环境中缺失的那些特性的polyfill；
 For more information on setting up Babel with your build system, IDE, and more, check out our interactive setup guide.
 想了解更多基于你的构建系统、IDE上安装Babel，或者更多详情，可以查看我们的交互式安装指引。
+`
+
+export default UsageGuide;

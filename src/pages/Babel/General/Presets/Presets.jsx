@@ -1,3 +1,11 @@
+import MarkdownTransfer from '../../../../components/MarkdownTransfer'
+const Presets = () => {
+  let html = MarkdownTransfer(content)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+};
+const content = `
 Presets
 预设
 Don't want to assemble your own set of plugins?
@@ -145,3 +153,8 @@ To specify an option, pass an object with the keys as the option names.
     }]
   ]
 }
+`
+
+
+
+export default Presets

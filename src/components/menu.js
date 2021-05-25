@@ -40,11 +40,14 @@ class MainMenu extends React.Component {
                 <Menu.Item key="GettingGarbageCollectionForFree">
                   <Link to="/v8-GettingGarbageCollectionForFree">GettingGarbageCollectionForFree</Link>
                 </Menu.Item>
-                <Menu.Item key="ShortBuiltIns">
-                  <Link to="/v8-ShortBuiltIns">ShortBuiltIns</Link>
+                <Menu.Item key="V8ReleaseV9_0">
+                  <Link to="/v8-V8ReleaseV9_0">V8ReleaseV9_0</Link>
                 </Menu.Item>
                 <Menu.Item key="V8ReleaseV9_1">
                   <Link to="/v8-V8ReleaseV9_1">V8ReleaseV9_1</Link>
+                </Menu.Item>
+                <Menu.Item key="ShortBuiltIns">
+                  <Link to="/v8-ShortBuiltIns">ShortBuiltIns</Link>
                 </Menu.Item>
               </SubMenu>
               <SubMenu key="Docs" title="Docs">
@@ -53,14 +56,33 @@ class MainMenu extends React.Component {
               <SubMenu key="js/wasm" title="js/wasm">
                 <Menu.Item key="Object rest and spread properties">Object rest and spread properties</Menu.Item>
               </SubMenu>
+              <SubMenu key="research" title="research">
+                <Menu.Item key="research">research</Menu.Item>
+              </SubMenu>
             </SubMenu>
-            <SubMenu key="sub1" icon={<AppstoreOutlined />} title="Babel">
-              <Menu.Item key="5">
-                <Link to="/Babel-Guides">Guides</Link>
-              </Menu.Item>
-              <Menu.Item key="6">
-                <Link to="/Babel-General">General</Link>
-              </Menu.Item>
+            <SubMenu key="Babel" icon={<AppstoreOutlined />} title="Babel">
+              <SubMenu key="Babel-Guides" title="Babel-Guides">
+                <Menu.Item key="WhatIsBabel">
+                  <Link to="/Babel-WhatIsBabel">WhatIsBabel</Link>
+                </Menu.Item>
+                <Menu.Item key="UsageGuide">
+                  <Link to="/Babel-UsageGuide">UsageGuide</Link>
+                </Menu.Item>
+                <Menu.Item key="ConfigureBabel">
+                  <Link to="/Babel-ConfigureBabel">ConfigureBabel</Link>
+                </Menu.Item>
+              </SubMenu>
+              <SubMenu key="Babel-General" title="Babel-General">
+                <Menu.Item key="Editors">
+                  <Link to="/Babel-Editors">Editors</Link>
+                </Menu.Item>
+                <Menu.Item key="Plugins">
+                  <Link to="/Babel-Plugins">Plugins</Link>
+                </Menu.Item>
+                <Menu.Item key="Presets">
+                  <Link to="/Babel-Presets">Presets</Link>
+                </Menu.Item>
+              </SubMenu>
             </SubMenu>
             <SubMenu key="parsingTech" icon={<AppstoreOutlined />} title="parsingTech">
               <Menu.Item key="5">

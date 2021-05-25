@@ -1,12 +1,22 @@
+import MarkdownTransfer from '../../../../components/MarkdownTransfer'
+const ShortBuiltinCalls = () => {
+  let html = MarkdownTransfer(content)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+};
 const content = `
   Short builtin calls
   
   Published 06 May 2021 · Tagged with JavaScript
+
   发布于2021年5月6日 标签：javascript
+
   In V8 v9.1 we’ve temporarily disabled embedded builtins on desktop.
   While embedding builtins significantly improves memory usage, we’ve realized that function calls between embedded builtins and JIT compiled code can come at a considerable performance penalty.
   This cost depends on the microarchitecture of the CPU.
   In this post we’ll explain why this is happening, what the performance looks like, and what we’re planning to do to resolve this long-term.
+
   在v8 9.1版本中，我们已经在桌面应用中暂时禁用embedded builtins(https://v8.dev/blog/embedded-builtins)。
   尽管嵌入builtins会显著的提升内存使用，但我们也已经意识到在嵌入内置与JIT所编译出的代码之间的频繁函数调用将会导致相当严重的性能代价。
   这个所花费的成本主要由CPU的微架构决定。
@@ -19,6 +29,7 @@ const content = `
   or somewhere inside of the 4-GiB virtual memory cage we allocate for pointer compression（https://v8.dev/blog/pointer-compression）.
   由v8的JIT编译器生成的机器代码是动态的分配在vm的内存页上。
   v8将内存页分配在一个连续的地址空间区域，而它本身有可能会被随机的放置到内存的某个位置（因为地址空间布局随机化的原因）或者在我们分配给指针自压缩的4-GiB的虚拟内存cage中，
+  
   V8 JIT code very commonly calls into builtins.
   Builtins are essentially snippets of machine code that are shipped as part of the VM.
   There are builtins that implement full JavaScript standard library functions, such as Function.prototype.bind, but many builtins are helper snippets of machine code that fill in the gap between the higher-level semantics of JS and the low-level capabilities of the CPU.
@@ -85,6 +96,8 @@ const content = `
   为了避免频繁的错误预测的问题与在x86-64非必要依赖分支预测的情况，我们已经决定在设备中用空出足够多的空间，暂时将内置复制到v8的指针压缩cage中去。
   这是的被复制的内置代码可以与动态生成的代码离的更近。
   性能结果也主要依赖于设备的配置，但是下面是我们的性能机器人所获取的到一些结果。
+  
+  ![这是图片](/assets/img/philly-magic-garden.jpg "Magic Gardens")
 
   Browsing benchmarks recorded from live pages
   从有效页面上记录的浏览器测定基准点
@@ -97,12 +110,4 @@ const content = `
   作为一种更好的长期的解决办法，我们正在研究将分配给JIT代码与Chrome的二进制代码离的更近一些。
   这样我们就可以再嵌入内置以再获得内存好处，同时，额外的还能提升从v8生成的代码调用到C++代码的性能。
 `
-function ShortBuiltinCalls() {
-  return (
-    <pre className="ShortBuiltinCalls">
-      {content}
-    </pre>
-  );
-}
-
 export default ShortBuiltinCalls;

@@ -1,3 +1,11 @@
+import MarkdownTransfer from '../../../../components/MarkdownTransfer'
+const Plugins = () => {
+  let html = MarkdownTransfer(content)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+};
+const content = `
 Plugins
 Babel is a compiler (source code => output code).
 Babel是一个编译器（将源码输出成结果代码。）
@@ -284,3 +292,5 @@ export default function() {
     },
   };
 }
+`
+export default Plugins

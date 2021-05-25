@@ -1,3 +1,12 @@
+import MarkdownTransfer from '../../../../components/MarkdownTransfer'
+const Editors = () => {
+  let html = MarkdownTransfer(content)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+};
+
+const content = `
 editors
 编辑器
 
@@ -31,3 +40,6 @@ There seems to be one other way to get the syntax highlighting working and you c
 
 WebStorm
 WebStorm now ships with support for ES2015+ without requiring the installation of any additional extensions. You may, however, need to enable it.
+`
+
+export default Editors

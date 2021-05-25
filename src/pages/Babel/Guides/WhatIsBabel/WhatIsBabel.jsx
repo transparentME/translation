@@ -1,3 +1,12 @@
+import MarkdownTransfer from '../../../../components/MarkdownTransfer'
+const WhatIsBabel = () => {
+  let html = MarkdownTransfer(content)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+};
+
+const content = `
 What is Babel?
 Babel是什么？
 
@@ -139,4 +148,5 @@ Compact
 Babel tries using the least amount of code possible with no dependence on a bulky runtime.
 Babel会尽可能地使用最精简的且不依赖于大的运行环境的代码；
 This may be difficult to do in cases, and there are "loose" options for specific transforms that may tradeoff spec compliancy for readability, file size, and speed.
-但在某些场景下，这是有难度的，并且为了某些特定的转换所存在的“宽松”选项，以用“可读性”、“文件大小”、“（读写）速度”以换取“符合规范”【这里需要找到证明，与现有原文不一致】
+但在某些场景下，这是有难度的，并且为了某些特定的转换所存在的“宽松”选项，以用“可读性”、“文件大小”、“（读写）速度”以换取“符合规范”【这里需要找到证明，与现有原文不一致】`
+export default WhatIsBabel;
