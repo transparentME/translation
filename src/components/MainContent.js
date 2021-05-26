@@ -15,9 +15,9 @@ import V8ReleaseV9_1 from '../pages/V8/Blog/V8ReleaseV9_1/V8ReleaseV9_1.js'
 import ShortBuiltIns from '../pages/V8/Blog/ShortBuiltIns/ShortBuiltIns.jsx'
 // docs
 // research
-import Research from '../pages/V8/Research/Research.js'
+import Research from '../pages/V8/Research/Research.jsx'
 
-//babel
+// babel
 // Guides
 import WhatIsBabel from '../pages/Babel/Guides/WhatIsBabel/WhatIsBabel.jsx'
 import UsageGuide from '../pages/Babel/Guides/UsageGuide/UsageGuide.jsx'
@@ -30,8 +30,24 @@ import Presets from '../pages/Babel/General/Presets/Presets.jsx'
 
 
 // leetcode
-import Offer15 from '../pages/leetcode/Offer15.js'
-import Offer17 from '../pages/leetcode/Offer17.js'
+import Offer15 from '../pages/Leetcode/Offer15.js'
+import Offer17 from '../pages/Leetcode/Offer17.js'
+
+// parsing Tech
+import Preface from '../pages/ParsingTech/Preface.jsx'
+import Introduction from '../pages/ParsingTech/Introduction.jsx'
+import GrammarsAsAGeneratingDevice from '../pages/ParsingTech/GrammarsAsAGeneratingDevice.jsx'
+import IntroductionToParsing from '../pages/ParsingTech/IntroductionToParsing.jsx'
+import GeneralNonDirectionalMethods from '../pages/ParsingTech/GeneralNonDirectionalMethods.jsx'
+import RegularGrammarsAndfiniteStateAutomata from '../pages/ParsingTech/RegularGrammarsAndfiniteStateAutomata.jsx'
+import GeneralDirectionalTopDownMethods from '../pages/ParsingTech/GeneralDirectionalTopDownMethods.jsx'
+import GeneralBottomUpParsing from '../pages/ParsingTech/GeneralBottomUpParsing.jsx'
+import DeterministicTopDownMethods from '../pages/ParsingTech/DeterministicTopDownMethods.jsx'
+import DeterministicBottomUpParsing from '../pages/ParsingTech/DeterministicBottomUpParsing.jsx'
+import ErrorHandling from '../pages/ParsingTech/ErrorHandling.jsx'
+import ComparativeSurvey from '../pages/ParsingTech/ComparativeSurvey.jsx'
+import ASimpleGeneralContextFreeParser from '../pages/ParsingTech/ASimpleGeneralContextFreeParser.jsx'
+import AnnotatedBibliography from '../pages/ParsingTech/AnnotatedBibliography.jsx'
 
 function MainContent () {
   return(
@@ -68,7 +84,21 @@ function MainContent () {
       <Route path="/leetcode-offer15" component={Offer15} />
       <Route path="/leetcode-offer17" component={Offer17} />
 
-      {/* <Route path="/contact" component={Contact} /> */}
+      {/* Parsing Tech */}
+      <Route path="/parsingtech-Preface" component={Preface} />
+      <Route path="/parsingtech-Introduction" component={Introduction} />
+      <Route path="/parsingtech-GrammarsAsAGeneratingDevice" component={GrammarsAsAGeneratingDevice} />
+      <Route path="/parsingtech-IntroductionToParsing" component={IntroductionToParsing} />
+      <Route path="/parsingtech-GeneralNonDirectionalMethods" component={GeneralNonDirectionalMethods} />
+      <Route path="/parsingtech-RegularGrammarsAndfiniteStateAutomata" component={RegularGrammarsAndfiniteStateAutomata} />
+      <Route path="/parsingtech-GeneralDirectionalTopDownMethods" component={GeneralDirectionalTopDownMethods} />
+      <Route path="/parsingtech-GeneralBottomUpParsing" component={GeneralBottomUpParsing} />
+      <Route path="/parsingtech-DeterministicTopDownMethods" component={DeterministicTopDownMethods} />
+      <Route path="/parsingtech-DeterministicBottomUpParsing" component={DeterministicBottomUpParsing} />
+      <Route path="/parsingtech-ErrorHandling" component={ErrorHandling} />
+      <Route path="/parsingtech-ComparativeSurvey" component={ComparativeSurvey} />
+      <Route path="/parsingtech-ASimpleGeneralContextFreeParser" component={ASimpleGeneralContextFreeParser} />
+      <Route path="/parsingtech-AnnotatedBibliography" component={AnnotatedBibliography} />
     </div>
   )
 }

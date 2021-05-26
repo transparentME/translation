@@ -1,3 +1,4 @@
+const content = `
 Building V8 with GN
 用GN构建V8
 
@@ -112,3 +113,4 @@ You can also test your most recently compiled build (in out.gn):
 tools/run-tests.py --gn
 Build issues? File a bug at v8.dev/bug or ask for help on v8-users@googlegroups.com.
 构建遇到问题？可以在（https://v8.dev/bug）提出问题，或着发邮件给我们v8-users@googlegroups.com获得帮助。
+`

@@ -1,4 +1,6 @@
-2.1 LANGUAGES AS INFINITE SETS
+import MarkdownTransfer from '../../components/MarkdownTransfer'
+
+const content = `2.1 LANGUAGES AS INFINITE SETS
 语言是一种无限的集合
 In computer science as in everyday parlance, a “grammar” serves to “describe” a “language”.
 在我们日常所提到的计算机科学中，“语法”就是用来“描述”一门“语言”的。
@@ -101,72 +103,76 @@ and the linguist holds his view of language because it gives him a formal tight 
 
 
 2.1.2 Grammars
-Everyone who has studied a foreign language knows that a grammar is a book of rules
-and examples which describes and teaches the language. Good grammars make a care￾ful distinction between the sentence/word level, which they often call syntax or syn￾taxis, and the word/letter level, which they call grammar. Syntax contains rules like
-18 Grammars as a generating device [Ch. 2 “pour que is followed by the subjunctive, but parce que is not”; grammar contains rules
-like “the plural of an English noun is formed by appending an -s, except when the word
-ends in -s, -sh, -o, -ch or -x, in which case -es is appended, or when the word has an
-irregular plural.”
-We skip the computer scientist’s view of a grammar for the moment and proceed
-immediately to the formal-linguist’s one. His view is at the same time very abstract and
-quite similar to the above: a grammar is any exact, finite-size, complete description of
-the language, i.e., of the set of sentences. This is in fact the school grammar, with the
-fuzziness removed. Although it will be clear that this definition has full generality, it
-turns out that it is too general, and therefore relatively powerless. It includes descrip￾tions like “the set of sentences that could have been written by Chaucer”; platonically
-speaking this defines a set, but we have no way of creating this set or testing whether a
-given sentence belongs to this language. This particular example, with its “could have
-been” does not worry the formal-linguist, but there are examples closer to his home that
-do. “The longest block of consecutive sevens in the decimal expansion of π” describes
-a language that has at most one word in it (and then that word will consist of sevens
-only), and as a definition it is exact, finite-size and complete. One bad thing with it,
-however, is that one cannot find this word; suppose one finds a block of one hundred
-sevens after billions and billions of digits, there is always a chance that further on there
-is an even longer block. And another bad thing is that one cannot even know if such a
-longest block exists at all. It is quite possible that, as one proceeds further and further
-up the decimal expansion of π, one would find longer and longer stretches of sevens,
-probably separated by ever-increasing gaps. A comprehensive theory of the decimal
-expansion of π might answer these questions, but no such theory exists.
-For these and other reasons, the formal-linguists have abandoned their static, pla￾tonic view of a grammar for a more constructive one, that of the generative grammar: a
-generative grammar is an exact, fixed-size recipe for constructing the sentences in the
-language. This means that, following the recipe, it must be possible to construct each
-sentence of the language (in a finite number of actions) and no others. This does not
-mean that, given a sentence, the recipe tells us how to construct that particular sentence,
-only that it is possible to do so. Such recipes can have several forms, of which some are
-more convenient than others.
-The computer scientist essentially subscribes to the same view, often with the
-additional requirement that the recipe should imply how a sentence can be constructed.
+语法
+Everyone who has studied a foreign language knows that a grammar is a book of rules and examples which describes and teaches the language.
+任何一个学习过一门外国语言的人都知道，语法都是一本讲规则和示例的书，他们分别是用来描述，和指导你学习语言。
+Good grammars make a careful distinction between the sentence/word level, which they often call syntax or syntaxis, and the word/letter level, which they call grammar.
+好的语法会仔细区分语句/词汇，也就是常说的语法与衔接，与词汇与字母的区别。
+Syntax contains rules like “pour que is followed by the subjunctive, but parce que is not”;
+句法包含像是“pour que应接虚拟语气而parce que则不行”的规定；
+grammar contains rules like “the plural of an English noun is formed by appending an -s, except when the word ends in -s, -sh, -o, -ch or -x, in which case -es is appended, or when the word has an irregular plural.”
+语法包含像是“英语名次表达复数时，后面应该接-s，但以-s, -sh, -o, -ch 或者 -x需要加上-es，或者有些名词有不规则复数变化”这样的规定。
+We skip the computer scientist’s view of a grammar for the moment and proceed immediately to the formal-linguist’s one.
+我们暂时忽略计算机科学家们对语法的观点，来看看形式语言家的观点。
+His view is at the same time very abstract and quite similar to the above: a grammar is any exact, finite-size, complete description of the language, i.e., of the set of sentences.
+他对此的观点很抽象且与上面的所述的很相似：语法就是对语言的一种严苛的、有限大小的、完整表述。
+This is in fact the school grammar, with the fuzziness removed.
+这是在学校所学的语法，并且没有那些模糊不清的部分。
+Although it will be clear that this definition has full generality, it turns out that it is too general, and therefore relatively powerless.
+尽管这个定义有普适性，但是也因为太泛，因此无法解释清楚。
+It includes descriptions like “the set of sentences that could have been written by Chaucer”;
+它包含了类似“这一系列语句本应该被Chaucer所写”。
+platonically speaking this defines a set, but we have no way of creating this set or testing whether a given sentence belongs to this language.
+这样的解释太过理想，但是却无法创造或验证，提供的话是否术语这个语言。
+This particular example, with its “could have been” does not worry the formal-linguist, but there are examples closer to his home that do.
+
+“The longest block of consecutive sevens in the decimal expansion of π” describes a language that has at most one word in it (and then that word will consist of sevens only), and as a definition it is exact, finite-size and complete.
+
+One bad thing with it, however, is that one cannot find this word; suppose one finds a block of one hundred sevens after billions and billions of digits, there is always a chance that further on there is an even longer block.
+
+And another bad thing is that one cannot even know if such a longest block exists at all.
+It is quite possible that, as one proceeds further and further up the decimal expansion of π, one would find longer and longer stretches of sevens, probably separated by ever-increasing gaps.
+A comprehensive theory of the decimal expansion of π might answer these questions, but no such theory exists.
+For these and other reasons, the formal-linguists have abandoned their static, platonic view of a grammar for a more constructive one, that of the generative grammar: a generative grammar is an exact, fixed-size recipe for constructing the sentences in the language.
+This means that, following the recipe, it must be possible to construct each sentence of the language (in a finite number of actions) and no others.
+This does not mean that, given a sentence, the recipe tells us how to construct that particular sentence, only that it is possible to do so.
+Such recipes can have several forms, of which some are more convenient than others.
+The computer scientist essentially subscribes to the same view, often with the additional requirement that the recipe should imply how a sentence can be constructed.
+
 2.1.3 Problems
-The above definition of a language as a possibly infinite set of sequences of symbols,
-and of a grammar as a finite recipe to generate these sentences, immediately gives rise
-to two embarrassing questions:
+The above definition of a language as a possibly infinite set of sequences of symbols, and of a grammar as a finite recipe to generate these sentences, immediately gives rise to two embarrassing questions:
+
 1. How can finite recipes generate enough infinite sets of sentences?
-2. If a sentence is just a sequence and has no structure and if the meaning of a sen￾tence derives, among other things, from its structure, how can we assess the mean￾ing of a sentence?
+    如果用有限方法来产生无限都的语句？
+2. If a sentence is just a sequence and has no structure and if the meaning of a sentence derives, among other things, from its structure, how can we assess the meaning of a sentence?
+    如果语句没有结构，只有顺序，那么当语句的意义来自于它的结构，那我们应该如何掌握语句的意思呢？
 These questions have long and complicated answers, but they do have answers.
-We shall first pay some attention to the first question and then devote the main body of
-this book to the second.
-Sec. 2.1] Languages as infinite sets 19
+这两个问题都有又长又复杂的答案，但是他们有答案。
+We shall first pay some attention to the first question and then devote the main body of this book to the second.
+本书会适当关注第一个问题，但把主要的内容放在第二个问题上。
+
 2.1.3.1 Infinite sets from finite descriptions
-In fact there is nothing wrong with getting a single infinite set from a single finite
-description: “the set of all positive integers” is a very finite-size description of a defin￾itely infinite-size set. Still, there is something disquieting about the idea, so we shall
-rephrase our question: “Can all languages be described by finite descriptions?”. As the
-lead-up already suggests, the answer is “No”, but the proof is far from trivial. It is,
-however, very interesting and famous, and it would be a shame not to present at least
-an outline of it here.
+    有限的描述创造无限的语句
+In fact there is nothing wrong with getting a single infinite set from a single finite description: “the set of all positive integers” is a very finite-size description of a definitely infinite-size set.
+Still, there is something disquieting about the idea, so we shall rephrase our question: “Can all languages be described by finite descriptions?”.
+但是，这个想法似乎有点让人不安，所以我们可以重述我们的问题："有限的描述是有可以叙述所有的语言的吗？"
+As the lead-up already suggests, the answer is “No”, but the proof is far from trivial.
+
+It is, however, very interesting and famous, and it would be a shame not to present at least an outline of it here.
+
+
 2.1.3.2 Descriptions can be enumerated
-The proof is based on two observations and a trick. The first observation is that
-descriptions can be listed and given a number. This is done as follows. First, take all
-descriptions of size one, that is, those of only one letter long, and sort them alphabeti￾cally. This is the beginning of our list. Depending on what, exactly, we accept as a
-description, there may be zero descriptions of size one, or 27 (all letters + space), or
-128 (all ASCII characters) or some such; this is immaterial to the discussion which fol￾lows.
-Second, we take all descriptions of size two, sort them alphabetically to give the
-second chunk on the list, and so on for lengths 3, 4 and further. This assigns a position
-on the list to each and every description. Our description “the set of all positive
-integers”, for instance, is of size 32, not counting the quotation marks. To find its posi￾tion on the list, we have to calculate how many descriptions there are with less than 32
-characters, say L. We then have to generate all descriptions of size 32, sort them and
-determine the position of our description in it, say P, and add the two numbers L and P.
-This will, of course, give a huge number†
-but it does ensure that the description is on
-the list, in a well-defined position; see Figure 2.1.
+The proof is based on two observations and a trick. The first observation is that descriptions can be listed and given a number.
+This is done as follows.
+First, take all descriptions of size one, that is, those of only one letter long, and sort them alphabetically.
+This is the beginning of our list.
+Depending on what, exactly, we accept as a description, there may be zero descriptions of size one, or 27 (all letters + space), or 128 (all ASCII characters) or some such;
+this is immaterial to the discussion which follows.
+Second, we take all descriptions of size two, sort them alphabetically to give the second chunk on the list, and so on for lengths 3, 4 and further.
+This assigns a position on the list to each and every description.
+Our description “the set of all positive integers”, for instance, is of size 32, not counting the quotation marks.
+To find its position on the list, we have to calculate how many descriptions there are with less than 32 characters, say L. We then have to generate all descriptions of size 32, sort them and determine the position of our description in it, say P, and add the two numbers L and P.
+This will, of course, give a huge number† but it does ensure that the description is on the list, in a well-defined position; see Figure 2.1.
 { descriptions of size 1 { descriptions of size 2 { descriptions of size 3 . . . . . {descriptions of size 31
 L . . . . . . . . . . . . . . . . . . . . . . . {
 descriptions of size 32
@@ -179,42 +185,41 @@ alphabetically, without reference to their lengths, would not do: there are alre
 number is 248 17168 89636 37891 49073 14874 06454 89259 38844 52556 26245 57755 89193
 30291, or roughly 2.5*1067
 .
-20 Grammars as a generating device [Ch. 2
-letter could get a number on the list. The second is that there is no need to actually do
-all this. It is just a thought experiment that allows us to examine and draw conclusion
-about the behaviour of a system in a situation which we cannot possibly examine physi￾cally.
-Also, there will be many nonsensical descriptions on the list; it will turn out that
-this is immaterial to the argument. The important thing is that all meaningful descrip￾tions are on the list, and the above argument ensures that.
+
+letter could get a number on the list.
+The second is that there is no need to actually do all this.
+It is just a thought experiment that allows us to examine and draw conclusion about the behaviour of a system in a situation which we cannot possibly examine physically.
+Also, there will be many nonsensical descriptions on the list;
+it will turn out that this is immaterial to the argument.
+The important thing is that all meaningful descriptions are on the list, and the above argument ensures that.
+
 2.1.3.3 Languages are infinite bit-strings
 We know that words (sentences) in a language are composed of a finite set of symbols;
-this set is called quite reasonably the alphabet. We will assume that the symbols in the
-alphabet are ordered. Then the words in the language can be ordered too. We shall indi￾cate the alphabet by Σ.
-Now the simplest language that uses alphabet Σ is that which consists of all words
-that can be made by combining letters from the alphabet. For the alphabet Σ={a, b} we
-get the language { , a, b, aa, ab, ba, bb, aaa, . . . }. We shall call this language Σ*, for
-reasons to be explained later; for the moment it is just a name.
-The set notation Σ*
-above started with “ { , a,”, a remarkable construction; the
-first word in the language is the empty word, the word consisting of zero a’s and zero
-b’s. There is no reason to exclude it, but, if written down, it may easily get lost, so we
-shall write it as ε (epsilon), regardless of the alphabet. So, Σ*= {ε, a, b, aa, ab, ba, bb,
-aaa, . . . }. In some natural languages, forms of the present tense of the verb “to be”
-are the empty word, giving rise to sentences of the form “I student”; Russian and
-Hebrew are examples of this.
-Since the symbols in the alphabet Σ are ordered, we can list the words in the
-language Σ*, using the same technique as in the previous section: First all words of size
-zero, sorted; then all words of size one, sorted; and so on. This is actually the order
-already used in our set notation for Σ*.
-The language Σ*
-has the interesting property that all languages using alphabet Σ
-are subsets of it. That means that, given another possibly less trivial language over Σ,
-called L, we can go through the list of words in Σ*
-and put ticks on all words that are in
-L. This will cover all words in L, since Σ*
-contains any possible word over Σ.
+this set is called quite reasonably the alphabet.
+We will assume that the symbols in the alphabet are ordered.
+Then the words in the language can be ordered too.
+We shall indicate the alphabet by Σ.
+Now the simplest language that uses alphabet Σ is that which consists of all words that can be made by combining letters from the alphabet.
+For the alphabet Σ={a, b} we get the language { , a, b, aa, ab, ba, bb, aaa, . . . }.
+We shall call this language Σ*, for reasons to be explained later;
+for the moment it is just a name.
+The set notation Σ* above started with “ { , a,”, a remarkable construction;
+the first word in the language is the empty word, the word consisting of zero a’s and zero b’s.
+There is no reason to exclude it, but, if written down, it may easily get lost, so we shall write it as ε (epsilon), regardless of the alphabet.
+So, Σ*= {ε, a, b, aa, ab, ba, bb, aaa, . . . }.
+In some natural languages, forms of the present tense of the verb “to be” are the empty word, giving rise to sentences of the form “I student”;
+Russian and Hebrew are examples of this.
+Since the symbols in the alphabet Σ are ordered, we can list the words in the language Σ*, using the same technique as in the previous section: First all words of size zero, sorted; then all words of size one, sorted; and so on.
+This is actually the order already used in our set notation for Σ*.
+The language Σ* has the interesting property that all languages using alphabet Σ are subsets of it.
+That means that, given another possibly less trivial language over Σ, called L, we can go through the list of words in Σ* and put ticks on all words that are in L.
+This will cover all words in L, since Σ* contains any possible word over Σ.
 Suppose our language L is “the set of all words that contain more a’s than b’s”.
-L={a, aa, aab, aba, baa, . . . }. The beginning of our list, with ticks, will look as fol￾lows:
-ε ✔ ab ✔ aa
+L={a, aa, aab, aba, baa, . . . }.
+The beginning of our list, with ticks, will look as follows:
+ε
+✔ ab
+✔ aa
 ab
 ba
 bb
@@ -223,29 +228,20 @@ bb
 ✔ aba
 abb
 ✔ baa
-Sec. 2.1] Languages as infinite sets 21
 bab
 bba
 bbb
 ✔ aaaa
 ... ...
-Given the alphabet with its ordering, the list of blanks and ticks alone is entirely suffi￾cient to identify and describe the language. For convenience we write the blank as a 0
-and the tick as a 1 as if they were bits in a computer, and we can now write
-L=0101000111010001 . . .
-(and Σ*=1111111111111111 . . .
-). It should be noted that
-this is true for any language, be it a formal language like L, a programming language
-like Pascal or a natural language like English. In English, the 1’s in the bit-string will
-be very scarce, since hardly any arbitrary sequence of words is a good English sentence
-(and hardly any arbitrary sequence of letters is a good English word, depending on
-whether we address the sentence/word level or the word/letter level).
+Given the alphabet with its ordering, the list of blanks and ticks alone is entirely sufficient to identify and describe the language.
+For convenience we write the blank as a 0 and the tick as a 1 as if they were bits in a computer, and we can now write L=0101000111010001 . . . (and Σ*=1111111111111111 . . . ).
+It should be noted that this is true for any language, be it a formal language like L, a programming language like Pascal or a natural language like English.
+In English, the 1’s in the bit-string will be very scarce, since hardly any arbitrary sequence of words is a good English sentence (and hardly any arbitrary sequence of letters is a good English word, depending on whether we address the sentence/word level or the word/letter level).
+
 2.1.3.4 Diagonalization
-The previous section attaches the infinite bit-string 0101000111010001... to the
-description “the set of all the words that contain more a’s than b’s”. In the same vein
-we can attach such bit-strings to all descriptions; some descriptions may not yield a
-language, in which case we can attach an arbitrary infinite bit-string to it. Since all
-descriptions can be put on a single numbered list, we get, for instance, the following
-picture:
+The previous section attaches the infinite bit-string 0101000111010001... to the description “the set of all the words that contain more a’s than b’s”.
+In the same vein we can attach such bit-strings to all descriptions; some descriptions may not yield a language, in which case we can attach an arbitrary infinite bit-string to it.
+Since all descriptions can be put on a single numbered list, we get, for instance, the following picture:
 Description Language
 Description #1 000000100...
 Description #2 110010001...
@@ -1473,4 +1469,12 @@ the Pascal run-time system.
 The set of all Pascal programs that solve a given problem (for instance, play
 chess) cannot be generated by a grammar (although the description of the set is
 finite).
-Note that each of the above sets is a subset of the previous set.
+Note that each of the above sets is a subset of the previous set.`
+
+const GrammarsAsAGeneratingDevice = () => {
+  let html = MarkdownTransfer(content)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+};
+  export default GrammarsAsAGeneratingDevice

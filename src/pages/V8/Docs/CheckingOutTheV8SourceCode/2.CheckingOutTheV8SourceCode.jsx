@@ -1,3 +1,4 @@
+const content = `
 Checking out the V8 source code
 获取V8源码
 This document explains how to check out the V8 source code locally. 
@@ -140,3 +141,4 @@ Have a look at our Release Process for more information about the different bran
 你也可以看看我们的发布流程，以获取更多关于不同分支的用途和其他信息。
 You may want to follow the V8 version that Chrome is shipping on its stable (or beta) channels, see https://omahaproxy.appspot.com/.
 也许你想关注Chrome现在正在使用的稳定（测试版）的v8版本，可以在这里了解更多（https://omahaproxy.appspot.com/）
+`

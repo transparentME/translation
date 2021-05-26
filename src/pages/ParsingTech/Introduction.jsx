@@ -1,3 +1,12 @@
+import MarkdownTransfer from '../../components/MarkdownTransfer'
+const Introduction = () => {
+  let html = MarkdownTransfer(content)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+};
+
+const content= `
 Introduction
 介绍
 
@@ -164,3 +173,6 @@ For instance, the annotated reference to Earley’s publication of the Earley pa
 例如，注释表达的是Earley关于Earley编译方法的发表【CF 1970】就可以在CF部分的1970的论文部分找到。
 Since the name of the first author is printed in bold letters, the actual reference is then easily located.
 第一个作者的名称将会被加粗打印，因此参考书目的实际为止可以被很容易定位到。
+`
+
+export default Introduction

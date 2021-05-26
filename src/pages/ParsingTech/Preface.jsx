@@ -1,3 +1,11 @@
+import MarkdownTransfer from '../../components/MarkdownTransfer'
+const Preface = () => {
+  let html = MarkdownTransfer(content)
+  return (
+    <div dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+};
+const content = `
 Preface
 前言
 
@@ -102,3 +110,6 @@ We hope we have named them all in our bibliography.
 Dick Grune
 Ceriel J.H. Jacobs
 Amstelveen/Amsterdam, July 1990; Sept 1998
+`
+
+export default Preface
